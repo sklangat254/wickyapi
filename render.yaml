@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: payhero-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PAYHERO_API_USERNAME
+        value: A7KChd6tMfHEYBgkj1wq
+      - key: PAYHERO_ACCOUNT_ID
+        value: 3844
+      - key: PAYHERO_CHANNEL_TYPE
+        value: 553125
+      - key: PAYHERO_ACCOUNT_NUMBER
+        value: 3844
+      - key: PAYHERO_CHANNEL_ID
+        value: 4594
